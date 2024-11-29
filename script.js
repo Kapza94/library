@@ -15,7 +15,7 @@ addBook("Harry Potter Prisoner of Azkaban", "J.K.Rowling");
 
 myLibrary.map((book) => {
   const newBook = document.createElement("li");
-  newBook.textContent = `${book.name} ${book.author}`;
+  newBook.innerHTML = `<p class='book-name'>${book.name}</p><p class='book-author'>${book.author}</p>`;
   newBook.setAttribute("id", `${book.name}`);
   bookContainer.appendChild(newBook);
   console.log(newBook);
