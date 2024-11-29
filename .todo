@@ -1,0 +1,16 @@
+TODO
+
+MODAL- ADDBOOK
+
+[x] 1. make modal container
+- [x] 1a. add blackBG with opacity and z-index and position absolute so its above everything
+- [] 1b. hide and show- IN JS
+
+[x] 2. make modal interior container
+
+[] 3. make modal interior content
+- [x] 3a. make form
+- [x] 3b. make form fields
+- [] 3aa. addeventlisteners to both fields
+- [] 3c. make submit button. prevent default so it doesnt send.
+- [] 3d. make the button click and add the name and author as params.

@@ -87,8 +87,8 @@ video {
   vertical-align: baseline;
 }
 
-html {
-  margin: 1rem;
+.content {
+  /* margin: 1rem; */
 }
 
 .nav-bar {
@@ -116,4 +116,33 @@ li {
 .book-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#modal-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* opacity: 80%; */
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+
+#modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  background-color: whitesmoke;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
