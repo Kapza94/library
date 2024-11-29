@@ -146,3 +146,11 @@ li {
   align-items: center;
   flex-direction: column;
 }
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none !important;
+}

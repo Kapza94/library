@@ -1,6 +1,8 @@
 const myLibrary = [];
 
 const bookContainer = document.getElementById("book-container");
+const modalCont = document.getElementById("modal-container");
+const addBookBtn = document.getElementById("new-book");
 
 function book(name, author) {
   (this.name = name), (this.author = author);
@@ -37,10 +39,25 @@ const addBookAuthorInput = document
     // console.log(inputAuthorsName);
   });
 
+addBookBtn.addEventListener("click", () => {
+  modalCont.classList.add("show");
+});
+
 const formBtn = document.getElementById("add-book").addEventListener("click", (event) => {
   event.preventDefault();
   console.log(inputBooksName, inputAuthorsName);
   addBook(inputBooksName, inputAuthorsName);
 
+  const newBook = document.createElement("li");
+  newBook.innerHTML = `<p class='book-name book'>${inputBooksName}</p><p class='book-author'>${inputAuthorsName}</p>`;
+  newBook.setAttribute("id", `${inputBooksName}`);
+  bookContainer.appendChild(newBook);
+
   console.log(myLibrary);
+
+  const closeModal = () => {
+    modalCont.classList.add("hide");
+  };
+
+  setTimeout(closeModal(), 3000);
 });
