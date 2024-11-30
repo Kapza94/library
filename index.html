@@ -7,8 +7,11 @@
     <title>Library</title>
   </head>
   <body>
-    <div id="modal-container" class="show">
+    <div id="modal-container" class="hide">
       <div id="modal">
+        <div id="close-btn-div">
+          <button id="close-btn">X</button>
+        </div>
         <form id="form" action="">
           <label for="book-name">Add a book name</label>
           <input id="book-name" type="text" />
@@ -19,14 +22,16 @@
       </div>
     </div>
     <div class="content">
-      <nav class="nav-bar">
-        <div class="nav-left"><h1>Library</h1></div>
+      <nav class="nav-bar container">
+        <div class="nav-left"><a class="logo-heading">Library</a></div>
         <div class="nav-right">
-          <p>contact</p>
-          <button id="new-book">New book</button>
+          <a class="nav-item">To Read</a>
+          <a class="nav-item">Favorite books</a>
+          <a class="nav-item">My Profile</a>
         </div>
       </nav>
       <ul id="book-container"></ul>
+      <div><button id="new-book">New book</button></div>
     </div>
   </body>
   <script src="./script.js"></script>

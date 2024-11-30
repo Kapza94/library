@@ -3,6 +3,7 @@ const myLibrary = [];
 const bookContainer = document.getElementById("book-container");
 const modalCont = document.getElementById("modal-container");
 const addBookBtn = document.getElementById("new-book");
+const closeModal = document.getElementById("close-btn");
 
 function book(name, author) {
   (this.name = name), (this.author = author);
@@ -40,7 +41,12 @@ const addBookAuthorInput = document
   });
 
 addBookBtn.addEventListener("click", () => {
+  modalCont.classList.remove("hide");
   modalCont.classList.add("show");
+});
+
+closeModal.addEventListener("click", () => {
+  modalCont.classList.add("hide");
 });
 
 const formBtn = document.getElementById("add-book").addEventListener("click", (event) => {

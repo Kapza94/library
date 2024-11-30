@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
 html,
 body,
 div,
@@ -87,22 +89,55 @@ video {
   vertical-align: baseline;
 }
 
-.content {
-  /* margin: 1rem; */
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: medium;
+  color: whitesmoke;
+  background-color: darkslateblue;
+}
+
+.logo-heading {
+  font-size: x-large;
+  padding: 1rem;
+  display: block;
+  cursor: pointer;
+}
+
+.nav-item {
+  padding: 1rem;
+  margin: 0 5px;
 }
 
 .nav-bar {
   display: flex;
   justify-content: space-between;
+  /* padding: 1rem; */
 }
 .nav-right {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.add-book {
-  margin-left: 1rem;
+.nav-item:hover {
+  transition: font-size 0.3s ease-in;
+  font-size: 17px;
+  cursor: pointer;
+  filter: drop-shadow(3px 3px 4px #000000);
 }
+
+#new-book:hover {
+  cursor: pointer;
+  filter: drop-shadow(3px 3px 4px #000000);
+  padding: 6px;
+  transition: padding 0.3s ease-in;
+}
+
+#new-book {
+  border-radius: 5px;
+  padding: 5px;
+}
+
 ul {
   list-style: none;
 }
@@ -112,8 +147,7 @@ li {
   margin: 1rem;
   height: 200px;
 }
-
-.book-container {
+#book-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -138,6 +172,13 @@ li {
   width: 50%;
   height: 50%;
   background-color: whitesmoke;
+  position: relative;
+}
+
+#close-btn-div {
+  top: 5px;
+  right: 5px;
+  position: absolute;
 }
 
 #form {
@@ -148,7 +189,7 @@ li {
 }
 
 .show {
-  display: block;
+  display: flex !important;
 }
 
 .hide {
