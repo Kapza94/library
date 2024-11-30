@@ -171,14 +171,34 @@ li {
   align-items: center;
   width: 50%;
   height: 50%;
-  background-color: whitesmoke;
+  background-color: darkslateblue;
   position: relative;
+}
+
+.input-field {
+  border-radius: 5px;
+  padding: 0.3rem;
+  background-color: rgb(83, 45, 119);
+  color: whitesmoke;
+  font-size: large;
+}
+
+.input-labels {
+  font-size: larger;
+}
+
+.input {
+  margin: 0.5rem 0;
 }
 
 #close-btn-div {
   top: 5px;
   right: 5px;
   position: absolute;
+}
+
+#close-btn {
+  background-color: blanchedalmond;
 }
 
 #form {
