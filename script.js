@@ -23,7 +23,6 @@ myLibrary.map((book) => {
   newBook.innerHTML = `<p class='book-name'>${book.name}</p><p class='book-author'>${book.author}</p>`;
   newBook.setAttribute("id", `${book.name}`);
   bookContainer.appendChild(newBook);
-  //   console.log(newBook);
 });
 
 let inputBooksName = "";
@@ -33,13 +32,11 @@ const addBookNameInput = document
   .getElementById("book-name")
   .addEventListener("change", (event) => {
     inputBooksName = event.target.value;
-    // console.log(inputBooksName);
   });
 const addBookAuthorInput = document
   .getElementById("book-author")
   .addEventListener("change", (event) => {
     inputAuthorsName = event.target.value;
-    // console.log(inputAuthorsName);
   });
 
 addBookBtn.addEventListener("click", () => {
