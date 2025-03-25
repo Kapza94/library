@@ -56,13 +56,14 @@ const formBtn = document.getElementById("add-book").addEventListener("click", (e
   console.log(inputBooksName, inputAuthorsName);
   addBook(inputBooksName, inputAuthorsName);
 
+  //crypto.randomUUID()             <---- This is used to give each book a random ID.
   const newBook = document.createElement("li");
-  newBook.innerHTML = `<p class='book-name book'>${inputBooksName}</p><p class='book-author'>${inputAuthorsName}</p>`;
-  newBook.setAttribute("id", `${inputBooksName}`);
+  newBook.innerHTML = `<p class='book-name book' >${inputBooksName}</p><p class='book-author'>${inputAuthorsName}</p>`;
+  newBook.setAttribute("id", `${crypto.randomUUID()}`);
   bookContainer.appendChild(newBook);
 
   console.log(myLibrary);
-
+  //This is closing the library.
   const closeModal = () => {
     modalCont.classList.add("hide");
   };
@@ -70,7 +71,7 @@ const formBtn = document.getElementById("add-book").addEventListener("click", (e
   const clearForm = () => {
     form.reset();
   };
-
+  //below clears the form once you submit it.
   clearForm();
 
   setTimeout(closeModal(), 3000);
