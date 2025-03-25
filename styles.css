@@ -92,8 +92,8 @@ video {
 body {
   font-family: "Roboto Condensed", sans-serif;
   font-size: medium;
-  color: whitesmoke;
-  background-color: darkslateblue;
+  color: black;
+  background-color: whitesmoke;
 }
 
 .logo-heading {
@@ -143,10 +143,14 @@ ul {
 }
 
 li {
-  background-color: blueviolet;
+  background-color: white;
   margin: 1rem;
   height: 200px;
+  border-radius: 20px;
+  width: 50%;
+  filter: drop-shadow(3px 3px 8px #000000);
 }
+
 #book-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -171,14 +175,15 @@ li {
   align-items: center;
   width: 50%;
   height: 50%;
-  background-color: darkslateblue;
+  background-color: whitesmoke;
   position: relative;
+  border-radius: 15px;
 }
 
 .input-field {
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 0.3rem;
-  background-color: rgb(83, 45, 119);
+  background-color: white;
   color: whitesmoke;
   font-size: large;
 }
@@ -198,7 +203,9 @@ li {
 }
 
 #close-btn {
-  background-color: blanchedalmond;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
 }
 
 #form {
@@ -208,10 +215,27 @@ li {
   flex-direction: column;
 }
 
+#add-book {
+  border-radius: 15px;
+  padding: 0.2rem 1rem;
+}
+
 .show {
   display: flex !important;
 }
 
 .hide {
   display: none !important;
+}
+
+.book-name {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+.book-author {
+  padding-top: 1rem;
+  padding-left: 1em;
+  padding-right: 1rem;
 }
