@@ -5,6 +5,8 @@ const modalCont = document.getElementById("modal-container");
 const addBookBtn = document.getElementById("new-book");
 const closeModal = document.getElementById("close-btn");
 
+const form = document.getElementById("form");
+
 function book(name, author) {
   (this.name = name), (this.author = author);
 }
@@ -64,6 +66,12 @@ const formBtn = document.getElementById("add-book").addEventListener("click", (e
   const closeModal = () => {
     modalCont.classList.add("hide");
   };
+
+  const clearForm = () => {
+    form.reset();
+  };
+
+  clearForm();
 
   setTimeout(closeModal(), 3000);
 });
