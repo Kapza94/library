@@ -173,7 +173,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 25%;
   height: 50%;
   background-color: whitesmoke;
   position: relative;
@@ -183,7 +183,7 @@ li {
 .input-field {
   border-radius: 15px;
   padding: 0.3rem;
-  background-color: white;
+  background-color: #e7e7e7;
   color: black;
   font-size: large;
 }
@@ -211,8 +211,8 @@ li {
 
 #form {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   flex-direction: column;
 }
 
@@ -220,6 +220,7 @@ li {
   border-radius: 15px;
   padding: 0.2rem 1rem;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 .show {
@@ -240,4 +241,8 @@ li {
   padding-top: 1rem;
   padding-left: 1em;
   padding-right: 1rem;
+}
+
+.checkbox-label {
+  margin-top: 2rem;
 }

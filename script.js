@@ -4,10 +4,11 @@ const bookContainer = document.getElementById("book-container");
 const modalCont = document.getElementById("modal-container");
 const addBookBtn = document.getElementById("new-book");
 const closeModal = document.getElementById("close-btn");
+const checkboxChecked = document.getElementById("read-status");
 
 const form = document.getElementById("form");
 
-function book(name, author) {
+function book(name, author, checked) {
   (this.name = name), (this.author = author);
 }
 
@@ -18,11 +19,17 @@ function addBook(title, author) {
 addBook("Harry Potter and the philosophers stone", "J.K.Rowling");
 addBook("Harry Potter Prisoner of Azkaban", "J.K.Rowling");
 
+//Mapping the book
 myLibrary.map((book) => {
   const newBook = document.createElement("li");
-  newBook.innerHTML = `<p class='book-name'>${book.name}</p><p class='book-author'>${book.author}</p>`;
+  newBook.innerHTML = `
+  <p class='book-name'>${book.name}</p>
+  <p class='book-author'>${book.author}</p>
+
+  `;
   newBook.setAttribute("id", `${book.name}`);
   bookContainer.appendChild(newBook);
+  // newBook.innerHTML = ``;
 });
 
 let inputBooksName = "";
