@@ -66,44 +66,48 @@ closeModal.addEventListener("click", () => {
 const formBtn = document.getElementById("add-book").addEventListener("click", (event) => {
   event.preventDefault();
 
-  // Dynamically fetch the readStatus value from the checkbox
-  const readStatus = checkboxChecked.checked;
+  if (inputBooksName === "" && inputAuthorsName === "") {
+    inputBooksName.style.border = "1px solid red";
+  } else {
+    // Dynamically fetch the readStatus value from the checkbox
+    const readStatus = checkboxChecked.checked;
 
-  // Add the new book with the correct readStatus
-  addBook(inputBooksName, inputAuthorsName, readStatus);
+    // Add the new book with the correct readStatus
+    addBook(inputBooksName, inputAuthorsName, readStatus);
 
-  // Create the new book element with the checkbox
-  const newBook = document.createElement("li");
-  newBook.innerHTML = `
-    <p class='book-name book'>${inputBooksName}</p>
-    <p class='book-author'>${inputAuthorsName}</p>
-    <label>
-      <input type="checkbox" class="read-status" ${readStatus ? "checked" : ""}>
-      Read
-    </label>
-  `;
-  newBook.setAttribute("id", `${crypto.randomUUID()}`);
-  bookContainer.appendChild(newBook);
+    // Create the new book element with the checkbox
+    const newBook = document.createElement("li");
+    newBook.innerHTML = `
+  <p class='book-name book'>${inputBooksName}</p>
+  <p class='book-author'>${inputAuthorsName}</p>
+  <label>
+    <input type="checkbox" class="read-status" ${readStatus ? "checked" : ""}>
+    Read
+  </label>
+`;
+    newBook.setAttribute("id", `${crypto.randomUUID()}`);
+    bookContainer.appendChild(newBook);
 
-  // Add event listener to the new checkbox to update readStatus
-  newBook.querySelector(".read-status").addEventListener("change", (event) => {
-    const book = myLibrary.find((b) => b.name === inputBooksName);
-    if (book) {
-      book.readStatus = event.target.checked;
-    }
-  });
+    // Add event listener to the new checkbox to update readStatus
+    newBook.querySelector(".read-status").addEventListener("change", (event) => {
+      const book = myLibrary.find((b) => b.name === inputBooksName);
+      if (book) {
+        book.readStatus = event.target.checked;
+      }
+    });
 
-  console.log(myLibrary);
+    console.log(myLibrary);
 
-  // Close the modal and clear the form
-  const closeModal = () => {
-    modalCont.classList.add("hide");
-  };
+    // Close the modal and clear the form
+    const closeModal = () => {
+      modalCont.classList.add("hide");
+    };
 
-  const clearForm = () => {
-    form.reset();
-  };
+    const clearForm = () => {
+      form.reset();
+    };
 
-  clearForm();
-  setTimeout(closeModal(), 3000);
+    clearForm();
+    setTimeout(closeModal(), 3000);
+  }
 });
